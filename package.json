@@ -17,6 +17,7 @@
     "@elysiajs/html": "^1.0.2",
     "@elysiajs/static": "^1.0.3",
     "elysia": "^1.0.22",
-    "pug": "^3.0.3"
+    "pug": "^3.0.3",
+    "sass": "^1.77.4"
   }
 }

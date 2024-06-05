@@ -1,0 +1,8 @@
+@use 'colors';
+
+body {
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+    background: colors.$body-color;
+}
