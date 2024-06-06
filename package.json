@@ -17,7 +17,10 @@
     "@elysiajs/html": "^1.0.2",
     "@elysiajs/static": "^1.0.3",
     "elysia": "^1.0.22",
+    "kysely": "^0.27.3",
+    "kysely-bun-sqlite": "^0.3.2",
     "pug": "^3.0.3",
-    "sass": "^1.77.4"
+    "sass": "^1.77.4",
+    "yaml": "^2.4.3"
   }
 }
