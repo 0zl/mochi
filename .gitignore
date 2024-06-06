@@ -132,3 +132,5 @@ dist
 # mochi
 user/config.yml
 user/user.db
+user/images/*.jpg
+user/images/*.png

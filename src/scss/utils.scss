@@ -1,0 +1,3 @@
+@function transparent($color, $amount) {
+    @return rgba($color, $amount);
+}

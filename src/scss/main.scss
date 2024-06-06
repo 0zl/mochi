@@ -1,11 +1,97 @@
-@use 'colors';
+@use 'utils';
+@use 'colors' as *;
+@use 'fonts';
 
-html, body {
-    background: colors.$body-color;
+:root {
+    font-size: 62.5%;
+}
+
+html, body {background-color: #5e6472;
     width: 100%;
     height: 100%;
 }
 
 h1, h2, h3, h4, h5, p {
     margin: 0;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/user-image/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .3);
+        z-index: 1;
+    }
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 100;
+
+    .bars {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+
+        .bar {
+            background: rgba(255, 255, 255, .5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, .25);
+
+            height: 100%;
+            border-radius: 5rem;
+
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            &:nth-child(1) {
+                flex-shrink: 1;
+                width: 10rem;
+            }
+        }
+    }
+}
+
+.logo-bar {
+    color: #3a3a3a;
+    font-size: 1.2em;
+    font-family: 'Pecita';
+    text-align: center;
+    line-height: 1em;
+
+    h1 {
+        position: relative;
+        top: 3px;
+    }
 }

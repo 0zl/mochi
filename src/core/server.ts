@@ -15,12 +15,18 @@ class MochiServer {
             assets: './src/assets'
         })
 
+        const userImages = staticPlugin({
+            prefix: '/user-image',
+            assets: './user/images'
+        })
+
         const htmlMiddleware = htmlPlugin({
             autoDoctype: false
         })
 
         new Elysia()
             .use(srcStatic)
+            .use(userImages)
             .use(htmlMiddleware)
             .use(Home)
             .listen(this.ServerPort)
